@@ -1,0 +1,461 @@
+html{
+	height: 100%;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-image: url('car-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-weight: 400;
+	background-position: bottom;
+    background-color: #acacae;
+    height: 100%;
+    padding-top: 65px;
+}
+h1, h2, h3, h4, h5, h6, label, .user-name a{
+	font-family: 'Poiret One', cursive;
+	margin:0;
+}
+
+
+.logo{
+	background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: 54%;
+    background-position: -5px 11px;
+    padding-left: 55px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100px;
+}
+.hidden{
+	visibility:hidden;
+}
+
+
+/***************** Navigation ***********/
+.navbar-default .navbar-toggle,
+.navbar-nav{
+	margin-top: 25px;
+}
+.navbar-default{
+	background: #acacae;
+	border:0;
+}
+.navbar-default .container-fluid{
+    padding-left: 20px;
+    padding-right: 30px;
+}
+.navbar-default .navbar-nav>li>a{
+	color: #333;
+}
+.navbar-collapse{
+	padding: 0;
+}
+.carpool-header{
+    color: #fff;
+}
+.carpool-header a, .carpool-header a:hover{
+	background-color: rgba(254,203,0,1) !important;
+	padding: 5px 10px !important;
+	font-size: 11px;
+}
+.carpool-header a.logout{
+	background: #333 !important;
+	color: #666 !important;
+}
+.carpool-nav{
+	padding: 0;
+	list-style: none;
+}
+.carpool-nav li{
+	margin-right: 10px;
+}
+.carpool-nav li:last-child{
+	margin-right: 0px;
+}
+.nav-pills {
+	margin: 10px 0;
+}
+.nav-pills>li>a:focus, .nav-pills>li>a:hover {
+	background: none;
+}
+
+
+
+/************** Pool *************/
+.pool{
+	position: relative;
+	display: flex;
+    background: rrgba(239,231,124, 1);
+    margin-bottom: 10px;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+.pool.active .user-profile {
+	background: #fff; 
+}
+
+.pool.active::before {
+	left: -29px;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #fff;
+	border-width: 15px;
+	margin-top: -15px;
+}
+
+.poolList{
+	height: 450px;
+	overflow: auto;
+	padding-left: 30px;
+	padding-top: 24px;
+}
+
+/********* Forms ***********/
+.carpool-form {
+	position: relative;
+	padding: 20px;
+	border-radius: 5px;
+	margin: auto;
+	background: rgba(255, 255, 255, 0.2);
+	margin-top: 20px;
+}
+.carpool-form label{
+	margin-right:10px;
+	font-weight: normal;
+}
+.carpool-form .time-wrapper{
+	max-width: 106px;
+}
+.carpool-form .submit-button {
+    max-width: 70px;
+}
+.create-form .search-elements .auto-complete{
+	flex: 1;
+}
+.create-form .time-wrapper{
+	max-width: 100%;
+}
+.create-form .submit-button {
+    max-width: 100%;
+}
+.create-form .btn{
+	width: 100%;
+}
+.create-form .search-elements .form-group{
+	margin-right: 0;
+	margin-bottom: 10px;
+}
+.close-form-buttom{
+	position: absolute;
+	right:0;
+	margin: 10px;
+	font-size: 20px;
+}
+.search-form .auto-complete{
+	display: flex;
+    width: 100%;
+}
+
+.search-form .form-group{
+	flex: 1;
+	margin-right: 5px;
+	margin-bottom: 0;
+}
+
+
+.container {
+	max-width: 90%;
+}
+.trip-panel  {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.trip-panel p {
+	margin:0;
+	color:#666;
+}
+.trip-panel>li{
+	padding: 10px;
+    margin: 3px;
+    background: rgba(255,255,255,0.8);
+    flex: 1;
+    color: #fff;
+}
+.trip-panel.pooler>li {
+	background: rgba(255,255,255,0.8);
+}
+.trip-panel>li>h5 {
+    font-size: 18px;
+    color: #46afcd;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.alert {
+	margin: 0;
+	padding: 0;
+}		
+.alert.alert-success{
+	padding: 10px;
+	margin-top: 10px;
+}		
+.user-profile{
+	background: #333;
+	padding: 2px 15px;
+	width: 215px;
+}
+.user-profile p{
+	color: #ccc;
+}
+.user-profile a,
+.user-profile a:hover{
+	font-size: 10px;
+	padding: 3px 10px;
+	background: #fecb00;
+	color: #333;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+.user-name {
+	color: #666;
+	margin-top: 10px;
+}
+.user-details .position, .user-profile .time {
+	color: #46afcd;
+}
+.user-details{
+	background: #ececec;
+	padding: 7px 15px;
+	font-size: 11px;
+	flex: 1;
+}
+.user-details h5{
+	color: #46afcd;
+}
+.user-details p {
+    height: 30px;
+    overflow: hidden;
+}
+.search-elements{
+    display: flex;
+    width: 100%;
+}
+.no-results{
+	margin-top: 40px;
+	color: #fff;
+}
+.no-results h4 {
+	font-size: 22px;
+    font-weight: 700;
+}
+.no-results p{
+	color: #ececec;
+}
+.search-elements>.form-group{
+	flex: 1;
+	margin-right: 10px;
+	margin-bottom: 0;
+}
+.time-field {
+	padding: 4px;
+    width: 100%;
+}
+.time-wrapper{
+	max-width: 106px;
+}
+.time-field{
+	padding: 4px;
+}
+#map {
+  margin: 0;
+  padding: 0;
+  height: 400px;
+  margin-top: 23px;
+}
+.map-container{
+	width: 100%;
+}
+.map-and-list, 
+.create-options {
+	display: flex;
+	margin-bottom: 10px;
+}
+.pool-options {
+	margin-right: 70px;
+}
+
+.bootstrap-timepicker {
+	display: flex;
+	width:50%;
+}
+#timepicker1{
+	width: 200px;
+}
+.home-page{
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-block{
+	display: flex;
+	width: 80%;
+}
+.intro-block h4{
+	font-size:30px;
+	color: #46afcd;
+}
+.intro-block p{
+	color: #666;
+	margin-top:5px;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+}
+
+.intro-block .btn{
+	font-size: 20px;
+	margin-top: 10px;
+    font-family: 'Poiret One', cursive;
+}
+
+.intro-block .intro{
+	position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.7);
+    margin-top: 50px;
+    width: 385px;
+}
+.welcome{
+	color: #fff;
+}
+.purpose{
+	margin-top: 50px;
+    color: #fff;
+    width: 50%;
+    letter-spacing: 0.5px;
+}
+.loader{
+	padding: 20px;
+	text-align: center;
+}
+.modal-content{
+	background: #46afcd;
+    border-radius: 0;
+}
+.modal-content *{
+	font-family: Arial;
+}
+
+/********* Icon arrow styel ********/
+.glyphicon-arrow-right:before {
+    content: "\E092";
+    position: absolute;
+    top: 10px;
+    right: -18px;
+    z-index: 9;
+    font-size: 19px;
+    color: #555;
+}
+
+
+/************ Bootstrap overrides ******/
+.btn-primary, .btn-primary:hover, .btn-primary:focus {
+    background-color: #fecb00;
+    border-color: #fecb00;
+    color: black;
+    border-radius: 0;
+}
+.form-control{
+	border-radius: 0;
+	color: #46afcd;
+	font-size: 11px;
+}
+a, a:hover, a:focus{
+	color: #fecb00;
+}
+
+
+/************* Media Queries *************/
+@media (max-width: 400px) {
+	html{
+		height: auto;
+	}
+	body{
+		padding-bottom: 20px;
+	}
+	.logo{
+		margin-left: 10px;
+	}
+	.intro-block{
+		flex-direction: column;
+		width: auto;
+	}
+	.container{
+		padding: 0;
+	}
+	.carpool-form .btn{
+		width: 100%;
+	}
+	.home-page{
+		margin-top: 10px;
+	}
+	.purpose{
+		width: 80%;
+	}
+	#timepicker1{
+		width: 100%;
+	}
+	.search-elements{
+		display: block;
+	}
+	.carpoola-form .submit-button {
+		max-width: 100%;
+	}
+	.search-form .auto-complete{
+		margin-bottom: 15px;
+	}
+	.map-and-list, .create-options{
+		display: block;
+	}
+	.poolList{
+		height: 300px;
+		padding: 0;
+		margin-top: 15px;
+	}
+	.pool-options {
+	    display: flex;
+	    width: 100%;
+	    margin-bottom: 10px;
+	}
+	#map{
+		height: 240px;
+	}
+	.my-account .poolList{
+		height: 100%;
+	}
+
+	.carpool-nav li{
+		margin-right: 0;
+	}
+	.navbar-nav{
+		margin: 0;
+	}
+}
+
